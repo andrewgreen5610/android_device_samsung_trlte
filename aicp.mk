@@ -16,8 +16,13 @@
 
 $(call inherit-product, device/samsung/trlte/full_trlte.mk)
 
-# Inherit common LineageOS phone.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common AICP phone.
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := trlte
-PRODUCT_NAME := lineage_trlte
+PRODUCT_NAME := aicp_trlte
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="_mone (underscoremone)"
+
